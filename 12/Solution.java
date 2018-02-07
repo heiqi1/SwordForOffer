@@ -45,8 +45,7 @@ public class Solution {
         if(pathLength==str.length)return true;
         boolean isPath=false;
         //位置是否合法
-        if(row>=0&&row<rows&&col>=0&&col<cols&&matrix[row*cols+col]==str[pathLength]&&
-          !visited[row*cols+col]){
+        if(check(matrix,rows,cols,str,visited,row,col,pathLength)){
             visited[row*cols+col]=true;
             pathLength++;
             isPath=hasPath(matrix,rows,cols,str,visited,row,col-1,pathLength)||
@@ -59,5 +58,13 @@ public class Solution {
             }
         }
         return isPath;
+    }
+    //检查是否合法
+    private boolean check(char[] matrix,int rows,int cols,char[] str,boolean[] visited,
+                                  int row,int col,int pathLength){
+        if(row>=0&&row<rows&&col>=0&&col<cols&&matrix[row*cols+col]==str[pathLength]&&
+          !visited[row*cols+col])
+            return true;
+        return false;
     }
 }
