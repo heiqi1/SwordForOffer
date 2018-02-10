@@ -1,0 +1,19 @@
+public class Solution {
+    public void Mirror(TreeNode root) {
+        //若是为空，则返回
+        if (root==null)
+            return;
+        if (root.left==null&&root.right==null)
+            return;
+        //交换左右子树
+        TreeNode temp=root.left;
+        root.left=root.right;
+        root.right=temp;
+        //递归
+        if (root.left!=null)
+            Mirror(root.left);
+        if (root.right!=null)
+            Mirror(root.right);
+ 
+   }
+}
