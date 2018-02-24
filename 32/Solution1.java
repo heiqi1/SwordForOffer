@@ -1,4 +1,4 @@
-//从上到下打印二叉树
+//不分行从上到下打印二叉树
 public class Solution {
     public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         ArrayList<Integer> result=new ArrayList<>();
