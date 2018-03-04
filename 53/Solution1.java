@@ -1,4 +1,5 @@
-public class Solution {
+//题目一：数字在排序数组中出现的次数
+public class Solution1 {
     public int GetNumberOfK(int [] array , int k) {
        if(array==null||array.length==0)return 0;
         int index=-1;
