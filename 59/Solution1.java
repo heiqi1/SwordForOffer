@@ -1,5 +1,5 @@
 //滑动窗口的最大值
-public class Solution {
+public class Solution1 {
     public ArrayList<Integer> maxInWindows(int [] num, int size)
     {
         ArrayList<Integer> result=new ArrayList<>();
