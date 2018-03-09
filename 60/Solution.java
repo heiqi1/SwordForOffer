@@ -28,4 +28,3 @@ public class Solution{
         return (double)dp[n][s]/total;           //和为s出现的概率
     }
 }
-```
